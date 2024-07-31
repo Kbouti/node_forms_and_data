@@ -42,3 +42,25 @@ exports.usersCreateGet = asyncHandler(async (req, res) => {
   });
 });
 
+
+exports.usersUpdateGet = asyncHandler(async (req, res) => {
+  const user = usersStorage.getUser(req.params.id);
+  res.render("update", { user, errors: [] });
+});
+
+exports.usersUpdatePost = [
+  validateUser,
+  asyncHandler(async (req, res) => {
+    const user = usersStorage.getUser(req.params.id);
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).render("update", {
+        errors: errors.array(),
+        user: user, 
+      });
+    }
+    const { firstName, lastName } = req.body;
+    usersStorage.updateUser(req.params.id, {firstName, lastName});
+    res.redirect("/");
+  })
+];
