@@ -2,8 +2,7 @@
 const asyncHandler = require("express-async-handler");
 const usersStorage = require("../storages/usersStorage");
 
-// ***********************************************************************************************************************
-// Next up we're going to add validation to our form
+// Required to apply form validation:
 const { body, validationResult } = require("express-validator");
 
 const alphaErr = "must only contain letters.";
@@ -34,7 +33,6 @@ exports.usersCreatePost = [
     res.redirect("/");
   })
 ];
-// ***********************************************************************************************************************
 
 
 exports.usersCreateGet = asyncHandler(async (req, res) => {
@@ -44,8 +42,3 @@ exports.usersCreateGet = asyncHandler(async (req, res) => {
   });
 });
 
-exports.usersCreatePost = asyncHandler(async (req, res) => {
-  const { firstName, lastName } = req.body;
-  usersStorage.addUser({firstName, lastName});
-  res.redirect("/");
-});
