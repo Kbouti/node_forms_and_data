@@ -10,5 +10,8 @@ usersRouter.post("/create", usersController.usersCreatePost);
 usersRouter.get("/:id/update", usersController.usersUpdateGet);
 usersRouter.post("/:id/update", usersController.usersUpdatePost);
 
+// Add router for delete path:
+usersRouter.post("/:id/delete", usersController.usersDeletePost);
+
 
 module.exports = usersRouter;

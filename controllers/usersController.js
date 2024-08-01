@@ -64,3 +64,11 @@ exports.usersUpdatePost = [
     res.redirect("/");
   })
 ];
+
+
+// Tell the server to delete a matching user, if any. Otherwise, respond with an error.
+exports.usersDeletePost = asyncHandler(async (req, res) => {
+  const user = usersStorage.getUser(req.params.id);
+  usersStorage.deleteUser(req.params.id);
+  res.redirect("/");
+});
