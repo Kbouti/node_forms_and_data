@@ -20,14 +20,12 @@ app.listen(PORT, () => console.log(`Express app listening on port ${PORT}!`));
 
 
 
-// Next step in assignment: 
-
+// Assignment: 
 // Add user details
-
 // Expand the User model we created to include more details. Implement the following fields and validations to your model:
-
 //     Email (required, must be formatted properly)
 //     Age (optional, must be a number between 18 and 120)
 //     Bio (optional, maximum 200 characters)
-
 // Don’t forget to update the view to display these new fields!
+
+// I've added fields for the new information on the form view, but we haven't altered the user model yet. Still much work to do
