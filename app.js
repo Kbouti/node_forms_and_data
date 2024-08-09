@@ -32,3 +32,5 @@ app.listen(PORT, () => console.log(`Express app listening on port ${PORT}!`));
 // Need to also display the new user info, and add fields to update form
 // And validate those fields
 // Also populate placeholder values in update form
+
+// Also we should probably link a stylesheet so we can organize our form fields in a less confusing way....
