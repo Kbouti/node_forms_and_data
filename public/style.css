@@ -7,3 +7,12 @@ body {
 form {
     background-color: salmon;
 }
+
+button {
+    background-color:blue;
+}
+
+.test {
+    color: purple;
+    background-color:forestgreen;
+}
