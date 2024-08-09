@@ -1,7 +1,21 @@
 <!-- views/update.ejs -->
 <%- include("partials/errors.ejs") %>
 <form action="/users/<%= user.id %>/update" method="POST" autocomplete="off">
-  <input type="text" name="firstName" value="<%= user.firstName %>" required>
-  <input type="text" name="lastName" value="<%= user.lastName %>" required>
+
+  <label for="firstName">First Name: </label>
+  <input type="text" name="firstName" id="firstName" required />
+
+  <label for="lastName">Last Name: </label>
+  <input type="text" name="lastName" id="lastName" required />
+
+  <label for="email">Email: </label>
+  <input type="email" name="email" id="email" required />
+
+  <label for="age">Age: </label>
+  <input type="number" name="age" id="age" />
+
+  <label for="bio">Bio: </label>
+  <input type="text" name="bio" id="bio" />
+
   <button type="submit">Update User</button>
 </form>

@@ -29,3 +29,6 @@ app.listen(PORT, () => console.log(`Express app listening on port ${PORT}!`));
 // Don’t forget to update the view to display these new fields!
 
 // I've added fields for the new information on the form view, but we haven't altered the user model yet. Still much work to do
+// Need to also display the new user info, and add fields to update form
+// And validate those fields
+// Also populate placeholder values in update form
