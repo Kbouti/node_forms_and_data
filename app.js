@@ -40,3 +40,7 @@ app.listen(PORT, () => console.log(`Express app listening on port ${PORT}!`));
 // Also populate placeholder values in update form
 
 // Also we should probably link a stylesheet so we can organize our form fields in a less confusing way....
+
+// We've attempted to link stylesheet but css ruels don't seem to be applying on all views.
+// I'm wondering if I should try to establish a template view and then extend other views on top of that:
+// https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
