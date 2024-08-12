@@ -6,13 +6,11 @@ body {
 
 form {
     background-color: salmon;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
-    background-color:blue;
+    margin: auto;
 }
 
-.test {
-    color: purple;
-    background-color:forestgreen;
-}

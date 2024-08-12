@@ -6,22 +6,31 @@
 </head>
 <body>
   <%- include("partials/errors.ejs") %>
-  <div class="test">Test div</div>
   <form action="/users/<%= user.id %>/update" method="POST" autocomplete="off">
-    <label for="firstName">First Name: </label>
-    <input type="text" name="firstName" id="firstName" required />
+    <div class="formEntry">
+      <label for="firstName">First Name: </label>
+      <input type="text" name="firstName" id="firstName" required />
+    </div>
 
-    <label for="lastName">Last Name: </label>
-    <input type="text" name="lastName" id="lastName" required />
+    <div class="formEntry">
+      <label for="lastName">Last Name: </label>
+      <input type="text" name="lastName" id="lastName" required />
+    </div>
 
-    <label for="email">Email: </label>
-    <input type="email" name="email" id="email" required />
+    <div class="formEntry">
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email" required />
+    </div>
 
-    <label for="age">Age: </label>
-    <input type="number" name="age" id="age" />
+    <div class="formEntry">
+      <label for="age">Age: </label>
+      <input type="number" name="age" id="age" />
+    </div>
 
-    <label for="bio">Bio: </label>
-    <input type="text" name="bio" id="bio" />
+    <div class="formEntry">
+      <label for="bio">Bio: </label>
+      <input type="text" name="bio" id="bio" />
+    </div>
 
     <button type="submit">Update User</button>
   </form>
