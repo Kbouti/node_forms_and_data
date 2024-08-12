@@ -46,3 +46,7 @@ app.listen(PORT, () => console.log(`Express app listening on port ${PORT}!`));
 // https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 
 // read about pug layouts 8/11
+// The question is why won't our style.css work in the users.ejs view???
+// The div exists with the proper class applied. The head has a link to the stylesheet. I changed the path from "./style.css" (As it works in index.ejs) to "../public/style.css" as a direct file path. Still nothing
+
+// CSS only works in index view

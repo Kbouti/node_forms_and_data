@@ -1,11 +1,12 @@
 <!-- views/update.ejs -->
 
 <head>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/public/style.css" type="text/css">
   <title>Update User</title>
 </head>
 <body>
   <%- include("partials/errors.ejs") %>
+  <div class="test">Test div</div>
   <form action="/users/<%= user.id %>/update" method="POST" autocomplete="off">
     <label for="firstName">First Name: </label>
     <input type="text" name="firstName" id="firstName" required />
