@@ -8,6 +8,9 @@ const { body, validationResult } = require("express-validator");
 const alphaErr = "must only contain letters.";
 const lengthErr = "must be between 1 and 10 characters.";
 
+const emailErr = "Must enter a valid email"
+// Nice! We've validated our email
+
 const validateUser = [
   body("firstName").trim()
     .isAlpha().withMessage(`First name ${alphaErr}`)
@@ -15,6 +18,11 @@ const validateUser = [
   body("lastName").trim()
     .isAlpha().withMessage(`Last name ${alphaErr}`)
     .isLength({ min: 1, max: 10 }).withMessage(`Last name ${lengthErr}`),
+
+// Here we need to validate our new fields
+  body("email").trim()
+    .isEmail().withMessage(`Email ${emailErr}`),
+
 ];
 
 // We can pass an entire array of middleware validations to our controller.
