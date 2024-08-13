@@ -6,7 +6,7 @@
 </head>
 <body>
   <%- include("partials/errors.ejs") %>
-  <form action="/users/<%= user.id %>/update" method="POST" autocomplete="off">
+  <form class="userForm" action="/users/<%= user.id %>/update" method="POST" autocomplete="off">
     <div class="formEntry">
       <label for="firstName">First Name: </label>
       <input type="text" name="firstName" id="firstName" required />
