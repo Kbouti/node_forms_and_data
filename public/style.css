@@ -10,18 +10,39 @@ body {
     box-sizing: border-box;
     height: 100vh;
     display:flex;
+    flex-direction: column;
+
 }
 
 form {
-    background-color: salmon;
+    background-color: white;
     display: flex;
     flex-direction: column;
-}
-
-button {
     margin: auto;
+    padding: 2rem;
+    border-radius:10px;
+    border: 2px solid #007AFF;
 }
-form element {
-    margin: 1rem;
+
+.formEntry {
+    display: flex;
+    flex-direction: column;
 
 }
+
+form h2 {
+    text-align: center;
+}
+
+form button {
+    margin: 1rem;
+}
+
+
+/* button {
+    margin: auto;
+
+}
+form div {
+    margin: .5rem;
+} */
