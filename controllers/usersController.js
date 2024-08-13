@@ -37,7 +37,7 @@ exports.usersCreatePost = [
 
 exports.usersCreateGet = asyncHandler(async (req, res) => {
   res.render("users", {
-    title: "User List",
+    title: "Create User",
     users: usersStorage.getUsers(),
   });
 });
@@ -45,7 +45,7 @@ exports.usersCreateGet = asyncHandler(async (req, res) => {
 
 exports.usersUpdateGet = asyncHandler(async (req, res) => {
   const user = usersStorage.getUser(req.params.id);
-  res.render("update", { user, errors: [] });
+  res.render("update", { title: "Update User", user, errors: [] });
 });
 
 exports.usersUpdatePost = [
