@@ -39,6 +39,26 @@ form button {
 }
 
 
+.userEntry, .entryCell {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid
+
+}
+
+.userEntry {
+    border-color:blue;
+}
+
+.userEntry button {
+    margin: 0;
+}
+.entryCell {
+    border-color:  red;
+}
+
+
+
 /* button {
     margin: auto;
 
