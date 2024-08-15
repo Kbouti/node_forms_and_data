@@ -30,7 +30,17 @@ const validateUser = [
   // Here we need to validate our new fields
   body("email").trim().isEmail().withMessage(`Email ${emailErr}`),
 
+  // *********************************************************************************************************************************************************************
   body("age").trim().isNumeric({min: 1, max: 120}).withMessage(`Age ${ageRangeErr}`),
+  // We're not sure if we've gotten the age check to work. I've gotten the message but I've also submitted with age -1. 
+  // Good next step would be to output new data on home page so we can see what's happening. 
+
+// Another good step would be to populate user info on the edit form, so you don't have to fill it all in again. 
+
+// *********************************************************************************************************************************************************************
+
+body("bio").trim()
+
 ];
 
 // We can pass an entire array of middleware validations to our controller.
