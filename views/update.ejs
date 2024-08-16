@@ -18,28 +18,30 @@
 
     <div class="formEntry">
       <label for="firstName">First Name: </label>
-      <input value=<%=user.firstName %> type="text" name="firstName" id="firstName" required />
+      <input value="<%=user.firstName %>" type="text" name="firstName"
+      id="firstName" required />
     </div>
-
 
     <div class="formEntry">
       <label for="lastName">Last Name: </label>
-      <input value=<%=user.lastName %> type="text" name="lastName" id="lastName" required />
+      <input value="<%=user.lastName %>" type="text" name="lastName"
+      id="lastName" required />
     </div>
 
     <div class="formEntry">
       <label for="email">Email: </label>
-      <input value=<%=user.email %> type="email" name="email" id="email" required />
+      <input value="<%= user.email %>" type="email" name="email" id="email"
+      required />
     </div>
 
     <div class="formEntry">
       <label for="age">Age: </label>
-      <input value=<%=user.age %> type="number" name="age" id="age" />
+      <input value="<%=user.age %>" type="number" name="age" id="age" />
     </div>
 
     <div class="formEntry">
       <label for="bio">Bio: </label>
-      <input value=<%=user.bio %> type="text" name="bio" id="bio" />
+      <input value="<%= user.bio %>" type="text" name="bio" id="bio" />
     </div>
 
     <button type="submit">Update User</button>
