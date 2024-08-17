@@ -40,7 +40,7 @@ const validateUser = [
     .isFloat({ min: 18, max: 120 })
     .withMessage(ageRangeErr),
 
-  body("bio").escape(),
+  body("bio").escape().isLength({max: 200}).withMessage("Can't be longer than 200 characters"),
   // We use escape here but I'm not certain it's necessary..... But anyway, the purpose is to sanitize user entry. Redundancy can't hurt.
   // (Apparently the <%= %> syntax also sanitizes)
 ];
