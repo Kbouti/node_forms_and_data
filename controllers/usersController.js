@@ -27,25 +27,22 @@ const validateUser = [
     .isLength({ min: 1, max: 10 })
     .withMessage(`Last name ${lengthErr}`),
 
-  // *********************************************************************************************************************************************************************
+  body("email")
+    .trim()
+    .isEmail()
+    .optional({ values: "falsy" })
+    .withMessage(`Email ${emailErr}`),
 
-  // Here we need to validate (and sanitize?) our new fields
-  // we've made both email and age optional with .optional()
+  body("age")
+    .optional({ values: "falsy" })
+    .isNumeric()
+    .withMessage(`Age must be a number`)
+    .isFloat({ min: 18, max: 120 })
+    .withMessage(ageRangeErr),
 
-  body("email").trim().isEmail().optional({values: "falsy"}).withMessage(`Email ${emailErr}`),
-
-  body("age").trim().optional({values: "falsy"}).isNumeric({min: 1, max: 120}).withMessage(`Age ${ageRangeErr}`),
-  // We're not sure if we've gotten the age check to work. I've gotten the message but I've also submitted with age -1. 
-
-
-body("bio").escape()
-// *********************************************************************************************************************************************************************
-// Is this "trim()" call the reason I was having so much trouble getting the bioi to save?? I', not sure.... reading up on validation and sanitization. 
-// *********************************************************************************************************************************************************************
-
-
-
-
+  body("bio").escape(),
+  // We use escape here but I'm not certain it's necessary..... But anyway, the purpose is to sanitize user entry. Redundancy can't hurt.
+  // (Apparently the <%= %> syntax also sanitizes)
 ];
 
 // We can pass an entire array of middleware validations to our controller.
@@ -89,7 +86,13 @@ exports.usersUpdatePost = [
       });
     }
     const { firstName, lastName, email, age, bio } = req.body;
-    usersStorage.updateUser(req.params.id, { firstName, lastName, email, age, bio });
+    usersStorage.updateUser(req.params.id, {
+      firstName,
+      lastName,
+      email,
+      age,
+      bio,
+    });
     res.redirect("/");
   }),
 ];
