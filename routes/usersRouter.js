@@ -14,4 +14,10 @@ usersRouter.post("/:id/update", usersController.usersUpdatePost);
 usersRouter.post("/:id/delete", usersController.usersDeletePost);
 
 
+// Add router for search function:
+usersRouter.get("/search", usersController.usersSearchGet);
+usersRouter.post("/search", usersController.usersSearchPost);
+
+
+
 module.exports = usersRouter;

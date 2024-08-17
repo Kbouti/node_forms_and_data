@@ -103,3 +103,16 @@ exports.usersDeletePost = asyncHandler(async (req, res) => {
   usersStorage.deleteUser(req.params.id);
   res.redirect("/");
 });
+
+
+
+// Search get route controller
+exports.usersSearchGet = asyncHandler(async (req, res) => {
+  res.redirect("/");
+});
+
+
+// Search post route controller
+exports.usersSearchPost = asyncHandler(async (req, res) => {
+  res.redirect("/");
+});
