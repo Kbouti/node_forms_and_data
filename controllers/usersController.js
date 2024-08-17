@@ -36,13 +36,9 @@ const validateUser = [
 
   body("age").trim().optional({values: "falsy"}).isNumeric({min: 1, max: 120}).withMessage(`Age ${ageRangeErr}`),
   // We're not sure if we've gotten the age check to work. I've gotten the message but I've also submitted with age -1. 
-  // Good next step would be to output new data on home page so we can see what's happening. 
 
-// Another good step would be to populate user info on the edit form, so you don't have to fill it all in again. 
 
-// *********************************************************************************************************************************************************************
-
-body("bio").trim()
+body("bio").escape()
 // *********************************************************************************************************************************************************************
 // Is this "trim()" call the reason I was having so much trouble getting the bioi to save?? I', not sure.... reading up on validation and sanitization. 
 // *********************************************************************************************************************************************************************
