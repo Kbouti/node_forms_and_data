@@ -11,11 +11,7 @@
 <ul>
   <% if (locals.users.length > 0) {%>
 
-<div>There are users</div>
 <%- include("./partials/searchForm.ejs", {title: "Search form"}); %>
-
-
-
 
     <% users.forEach(user => { %>
         <li class="userEntry">
