@@ -6,9 +6,15 @@
 <body>
 <h1><%= title %></h1>
 
+<a href="/users/create">Create a user</a>
 
 <ul>
-  <% if (locals.users) {%>
+  <% if (locals.users.length > 0) {%>
+
+<!-- Here we can choose to render a search form if there are users to search from -->
+    <div>There are users</div>
+
+
     <% users.forEach(user => { %>
         <li class="userEntry">
           <div class="entryCell">
@@ -42,8 +48,10 @@
       </form>
           </li>
               <% }); %>
-  <% } %>
+  <% } else { %>
+<div>Currently no users. Add one!</div>
+<% } %>
+
 </ul>
-<a href="/users/create">Create a user</a>
 </body>
 </html>
