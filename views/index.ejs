@@ -11,8 +11,10 @@
 <ul>
   <% if (locals.users.length > 0) {%>
 
-<!-- Here we can choose to render a search form if there are users to search from -->
-    <div>There are users</div>
+<div>There are users</div>
+<%- include("./partials/searchForm.ejs", {title: "Search form"}); %>
+
+
 
 
     <% users.forEach(user => { %>
