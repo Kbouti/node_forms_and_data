@@ -20,8 +20,7 @@ exports.searchPost = [
     // Next we need to access storage?
     // We have user storage imported already.....
 
-    // Currently redirecting to home. Should we direct to a new view for the search results?
-
-    res.redirect("/");
+    res.render("../views/searchResults");
+    // res.redirect("/");
   }),
 ];
