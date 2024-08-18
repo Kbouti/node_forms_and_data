@@ -9,7 +9,6 @@ const alphaErr = "must only contain letters.";
 const lengthErr = "must be between 1 and 10 characters.";
 
 const emailErr = "Must enter a valid email";
-// Nice! We've validated our email
 
 const ageRangeErr = "Must be between 18 and 120";
 
@@ -105,14 +104,3 @@ exports.usersDeletePost = asyncHandler(async (req, res) => {
 });
 
 
-
-// Search get route controller
-exports.usersSearchGet = asyncHandler(async (req, res) => {
-  res.redirect("/");
-});
-
-
-// Search post route controller
-exports.usersSearchPost = asyncHandler(async (req, res) => {
-  res.redirect("/");
-});
