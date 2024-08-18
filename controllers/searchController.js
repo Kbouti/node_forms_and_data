@@ -17,9 +17,13 @@ exports.searchGet = [
 
 exports.searchPost = [
     asyncHandler(async (req, res) => {
-        console.log(`Search post activated`)
-        // FUUUUUCK YEEEAHHH 
-        // This runs when we submit our search form. Next step, access the search term from the request
-        
+
+        const searchTerm = req.body.search;
+
+        console.log(`Search post activated. Search term: ${searchTerm}`);
+
+        // Next we need to access storage? 
+
+
     })
 ];
