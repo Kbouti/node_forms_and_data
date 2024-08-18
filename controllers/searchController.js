@@ -5,25 +5,23 @@ const usersStorage = require("../storages/usersStorage");
 // Required to apply form validation:
 const { body, validationResult } = require("express-validator");
 
-
 exports.searchGet = [
-    asyncHandler(async (req, res) => {
-        console.log(`Search get activated`)
-    })
+  asyncHandler(async (req, res) => {
+    console.log(`Search get activated`);
+  }),
 ];
 
-
-
-
 exports.searchPost = [
-    asyncHandler(async (req, res) => {
+  asyncHandler(async (req, res) => {
+    const searchTerm = req.body.search;
 
-        const searchTerm = req.body.search;
+    console.log(`Search post activated. Search term: ${searchTerm}`);
 
-        console.log(`Search post activated. Search term: ${searchTerm}`);
+    // Next we need to access storage?
+    // We have user storage imported already.....
 
-        // Next we need to access storage? 
+    // Currently redirecting to home. Should we direct to a new view for the search results?
 
-
-    })
+    res.redirect("/");
+  }),
 ];
