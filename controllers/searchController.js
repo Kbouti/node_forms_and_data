@@ -20,7 +20,7 @@ exports.searchPost = [
     // Next we need to access storage?
     // We have user storage imported already.....
 
-    res.render("../views/searchResults");
+    res.render("../views/searchResults", {searchTerm, usersStorage});
     // res.redirect("/");
   }),
 ];
