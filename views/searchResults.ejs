@@ -11,8 +11,9 @@
 
     <!-- Next We need to conditionally render every item from userstorage that matches our search term -->
 
-    <!-- Boom!!!! We can search for message ID -->
+    <!-- Boom!!!! We can search for user first name -->
      <!-- If we change our if statement below we can search for different fields -->
+      <!-- We could add or statements to search in other fields, or a toggle button to indicate if you're searching for an email or a name. I like the or route better... -->
     <ul>
       <% users.forEach(user => { %> <% if (user.firstName == searchTerm) { %>
 
