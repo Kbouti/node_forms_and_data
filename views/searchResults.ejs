@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Search Results</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Search Results for "<%= searchTerm %>"</h1>
     <a href="/">Home</a>
 
-    
-<!-- Next We need to conditionally render every item from userstorage that matches our search term -->
+    <!-- Next We need to conditionally render every item from userstorage that matches our search term -->
 
-</body>
+    <!-- Boom!!!! We can search for message ID -->
+     <!-- If we change our if statement below we can search for different fields -->
+    <ul>
+      <% users.forEach(user => { %> <% if (user.firstName == searchTerm) { %>
+
+      <li class="userEntry">
+        <div class="entryCell">
+          <p>ID:</p>
+          <p><%= user.id %></p>
+        </div>
+
+        <div class="entryCell">
+          <p>Name:</p>
+          <p><%= user.firstName %> <%= user.lastName %></p>
+        </div>
+
+        <div class="entryCell">
+          <p>Email:</p>
+          <p><%= user.email %></p>
+        </div>
+
+        <div class="entryCell">
+          <p>Age:</p>
+          <p><%= user.age %></p>
+        </div>
+
+        <div class="entryCell">
+          <p>Bio:</p>
+          <p><%= user.bio %></p>
+        </div>
+      </li>
+      <% } %> <% }) %>
+    </ul>
+  </body>
 </html>
